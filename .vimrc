@@ -10,6 +10,11 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -26,7 +31,7 @@ set tabstop=2
 " for C-like  programming where comments have explicit end
 " characters, if starting a new line in the middle of a comment automatically
 " insert the comment leader characters:
-autocmd FileType c,cpp,java,python set formatoptions+=ro tabstop=2 shiftwidth=2 expandtab
+autocmd FileType c,cpp,java,python set formatoptions+=ro tabstop=4 shiftwidth=4 expandtab
 "autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 set autowrite                   " Automatically save before :next, :make etc.
@@ -37,3 +42,11 @@ set textwidth=79
 
 "Youcompleteme fix
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+" vim-airline theme
+
+let g:airline_theme = 'bubblegum'
+set t_Co=256
+set background=dark
+"colorscheme evening
+colorscheme elflord
